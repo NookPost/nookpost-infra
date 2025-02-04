@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: nookpost-apps
+  name: nookpost-backend
   namespace: argocd
 spec:
   syncPolicy:
