@@ -1,0 +1,31 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  namespace: nookpost
+  labels:
+    app: nookpost-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nookpost-backend
+  template:
+    metadata:
+      labels:
+        app: nookpost-backend
+    spec:
+      containers:
+      - name: backend
+        image: "ghcr.io/nookpost/nookpost-backend:sha-29b9b7a"
+        ports:
+        - name: backend
+          protocol: TCP
+          containerPort: 5000
+        resources:
+          requests:
+            cpu: 10m
+            memory: 50Mi
+          limits:
+            memory: 100Mi

@@ -1,0 +1,17 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend
+  namespace: nookpost
+  labels:
+    app: nookpost-backend
+spec:
+  type: ClusterIP
+  selector:
+    app: nookpost-backend
+  ports:
+    - name: backend
+      protocol: TCP
+      port: 5000
+      targetPort: backend

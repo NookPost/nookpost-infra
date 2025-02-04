@@ -12,5 +12,5 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: app
+    path: backend
     repoURL: https://github.com/nookpost/nookpost-infra
