@@ -8,5 +8,14 @@
 			"backend/.+\\.yaml$"
 		]
 	},
+	"packageRules": [
+		{
+			"matchUpdateTypes": [
+				"minor",
+				"patch"
+			],
+			"automerge": true
+		}
+	],
 	"branchConcurrentLimit": 25
 }
