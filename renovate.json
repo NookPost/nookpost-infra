@@ -17,6 +17,9 @@
 			"automerge": true
 		}
 	],
+	"schedule": [
+		"0 * * * *"
+	],
 	"ignoreTests": true,
 	"branchConcurrentLimit": 25
 }
