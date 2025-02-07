@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: "ghcr.io/nookpost/nookpost-backend:v0.3.0"
+        image: "ghcr.io/nookpost/nookpost-backend:v0.3.1"
         ports:
         - name: backend
           protocol: TCP
