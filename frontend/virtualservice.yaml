@@ -2,16 +2,16 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
-  name: nookpost-backend
+  name: nookpost-frontend
   namespace: nookpost
 spec:
   hosts:
-  - "nookpost-dev-api.jkulzer.dev"
+  - "nookpost-dev.jkulzer.dev"
   gateways:
   - istio-system/main-gateway
   http:
   - route:
     - destination:
-        host: backend
+        host: frontend
         port:
-          number: 5000
+          number: 80

@@ -1,0 +1,34 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  namespace: nookpost
+  labels:
+    app: nookpost-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nookpost-frontend
+  template:
+    metadata:
+      labels:
+        app: nookpost-frontend
+    spec:
+      containers:
+      - name: backend
+        image: "ghcr.io/nookpost/nookpost-frontend:v0.4.0"
+        env:
+          - name: BACKEND_URL
+            value: "https://nookpost-dev-api.jkulzer.dev"
+        ports:
+        - name: frontend
+          protocol: TCP
+          containerPort: 80
+        resources:
+          requests:
+            cpu: 10m
+            memory: 50Mi
+          limits:
+            memory: 100Mi
