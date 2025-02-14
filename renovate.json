@@ -5,7 +5,8 @@
 	],
 	"kubernetes": {
 		"fileMatch": [
-			"backend/.+\\.yaml$"
+			"backend/.+\\.yaml$",
+			"frontend/.+\\.yaml$"
 		]
 	},
 	"packageRules": [
