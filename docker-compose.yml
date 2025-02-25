@@ -1,0 +1,15 @@
+services:
+  frontend:
+    build:
+      context: ../nookpost-frontend/.
+      dockerfile: Dockerfile
+    ports:
+      - 8080:80
+    environment:
+      - BACKEND_URL=http://localhost:5000
+  backend:
+    build:
+      context: ../nookpost-backend/.
+      dockerfile: Dockerfile
+    ports:
+      - 5000:5000
