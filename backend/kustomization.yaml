@@ -6,4 +6,3 @@ resources:
   - nookpost-ns.yaml
   - backend-svc.yaml
   - backend-deployment.yaml
-  - backend-virtualservice.yaml

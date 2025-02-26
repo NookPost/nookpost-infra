@@ -2,7 +2,7 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
-  name: nookpost-frontend
+  name: nookpost
   namespace: nookpost
 spec:
   hosts:
@@ -10,7 +10,20 @@ spec:
   gateways:
   - istio-system/main-gateway
   http:
-  - route:
+  - match:
+    - uri:
+        prefix: /api/v1
+    - uri:
+        prefix: /swagger
+    route:
+    - destination:
+        host: backend
+        port:
+          number: 5000
+  - match:
+    - uri:
+        prefix: /
+    route:
     - destination:
         host: frontend
         port:

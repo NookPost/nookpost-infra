@@ -21,7 +21,7 @@ spec:
         image: "ghcr.io/nookpost/nookpost-frontend:v0.20.0"
         env:
           - name: BACKEND_URL
-            value: https://nookpost-dev-api.jkulzer.dev
+            value: https://nookpost-dev.jkulzer.dev
         ports:
         - name: frontend
           protocol: TCP
