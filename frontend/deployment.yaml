@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: "ghcr.io/nookpost/nookpost-frontend:v0.20.1"
+        image: "ghcr.io/nookpost/nookpost-frontend:v0.20.3"
         env:
           - name: BACKEND_URL
             value: https://nookpost-dev.jkulzer.dev
